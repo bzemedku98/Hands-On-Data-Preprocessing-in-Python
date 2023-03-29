@@ -15713,6 +15713,296 @@ class="
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here are the level Ⅰ data cleaning steps that the dataset needs:</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#First try to see how many missing values there are.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of missing values:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">movie_df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">n_MV</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">movie_df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="n">n_MV</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Number of missing values:
+Runtime:0
+IMDB_Rating:0
+Gross:169
+Genre1:0
+Genre2:105
+Genre3:354
+Rating_16:0
+Rating_A:0
+Rating_Approved:0
+Rating_G:0
+Rating_GP:0
+Rating_PG:0
+Rating_PG-13:0
+Rating_Passed:0
+Rating_R:0
+Rating_TV-14:0
+Rating_TV-MA:0
+Rating_TV-PG:0
+Rating_U:0
+Rating_U/A:0
+Rating_UA:0
+Rating_Unrated:0
+Rating_nan:0
+Genre_Action, Adventure:0
+Genre_Action, Adventure, Biography:0
+Genre_Action, Adventure, Comedy:0
+Genre_Action, Adventure, Crime:0
+Genre_Action, Adventure, Drama:0
+Genre_Action, Adventure, Family:0
+Genre_Action, Adventure, Fantasy:0
+Genre_Action, Adventure, History:0
+Genre_Action, Adventure, Horror:0
+Genre_Action, Adventure, Mystery:0
+Genre_Action, Adventure, Romance:0
+Genre_Action, Adventure, Sci-Fi:0
+Genre_Action, Adventure, Thriller:0
+Genre_Action, Adventure, War:0
+Genre_Action, Adventure, Western:0
+Genre_Action, Biography, Crime:0
+Genre_Action, Biography, Drama:0
+Genre_Action, Comedy, Crime:0
+Genre_Action, Comedy, Fantasy:0
+Genre_Action, Comedy, Mystery:0
+Genre_Action, Comedy, Romance:0
+Genre_Action, Crime, Comedy:0
+Genre_Action, Crime, Drama:0
+Genre_Action, Crime, Mystery:0
+Genre_Action, Crime, Thriller:0
+Genre_Action, Drama:0
+Genre_Action, Drama, History:0
+Genre_Action, Drama, Mystery:0
+Genre_Action, Drama, Sci-Fi:0
+Genre_Action, Drama, Sport:0
+Genre_Action, Drama, Thriller:0
+Genre_Action, Drama, War:0
+Genre_Action, Drama, Western:0
+Genre_Action, Mystery, Thriller:0
+Genre_Action, Sci-Fi:0
+Genre_Action, Sci-Fi, Thriller:0
+Genre_Action, Thriller:0
+Genre_Adventure, Biography, Crime:0
+Genre_Adventure, Biography, Drama:0
+Genre_Adventure, Comedy, Crime:0
+Genre_Adventure, Comedy, Drama:0
+Genre_Adventure, Comedy, Family:0
+Genre_Adventure, Comedy, Fantasy:0
+Genre_Adventure, Comedy, Film-Noir:0
+Genre_Adventure, Comedy, Sci-Fi:0
+Genre_Adventure, Comedy, War:0
+Genre_Adventure, Drama:0
+Genre_Adventure, Drama, Fantasy:0
+Genre_Adventure, Drama, History:0
+Genre_Adventure, Drama, Musical:0
+Genre_Adventure, Drama, Romance:0
+Genre_Adventure, Drama, Sci-Fi:0
+Genre_Adventure, Drama, Thriller:0
+Genre_Adventure, Drama, War:0
+Genre_Adventure, Drama, Western:0
+Genre_Adventure, Family, Fantasy:0
+Genre_Adventure, Fantasy:0
+Genre_Adventure, History, War:0
+Genre_Adventure, Horror, Sci-Fi:0
+Genre_Adventure, Mystery, Thriller:0
+Genre_Adventure, Sci-Fi:0
+Genre_Adventure, Thriller:0
+Genre_Animation, Action, Adventure:0
+Genre_Animation, Action, Crime:0
+Genre_Animation, Action, Drama:0
+Genre_Animation, Action, Fantasy:0
+Genre_Animation, Action, Sci-Fi:0
+Genre_Animation, Adventure, Comedy:0
+Genre_Animation, Adventure, Drama:0
+Genre_Animation, Adventure, Family:0
+Genre_Animation, Adventure, Fantasy:0
+Genre_Animation, Biography, Crime:0
+Genre_Animation, Biography, Drama:0
+Genre_Animation, Comedy, Crime:0
+Genre_Animation, Comedy, Drama:0
+Genre_Animation, Comedy, Fantasy:0
+Genre_Animation, Crime, Mystery:0
+Genre_Animation, Drama, Family:0
+Genre_Animation, Drama, Fantasy:0
+Genre_Animation, Drama, Romance:0
+Genre_Animation, Drama, War:0
+Genre_Animation, Family, Fantasy:0
+Genre_Animation, Sci-Fi:0
+Genre_Biography, Comedy, Drama:0
+Genre_Biography, Crime, Drama:0
+Genre_Biography, Drama:0
+Genre_Biography, Drama, Family:0
+Genre_Biography, Drama, History:0
+Genre_Biography, Drama, Music:0
+Genre_Biography, Drama, Romance:0
+Genre_Biography, Drama, Sport:0
+Genre_Biography, Drama, Thriller:0
+Genre_Biography, Drama, War:0
+Genre_Comedy:0
+Genre_Comedy, Crime:0
+Genre_Comedy, Crime, Drama:0
+Genre_Comedy, Crime, Mystery:0
+Genre_Comedy, Crime, Romance:0
+Genre_Comedy, Crime, Sport:0
+Genre_Comedy, Crime, Thriller:0
+Genre_Comedy, Drama:0
+Genre_Comedy, Drama, Family:0
+Genre_Comedy, Drama, Fantasy:0
+Genre_Comedy, Drama, Music:0
+Genre_Comedy, Drama, Musical:0
+Genre_Comedy, Drama, Romance:0
+Genre_Comedy, Drama, Thriller:0
+Genre_Comedy, Drama, War:0
+Genre_Comedy, Family:0
+Genre_Comedy, Family, Fantasy:0
+Genre_Comedy, Family, Romance:0
+Genre_Comedy, Fantasy, Romance:0
+Genre_Comedy, Horror:0
+Genre_Comedy, Music:0
+Genre_Comedy, Music, Musical:0
+Genre_Comedy, Music, Romance:0
+Genre_Comedy, Musical, Romance:0
+Genre_Comedy, Musical, War:0
+Genre_Comedy, Mystery, Romance:0
+Genre_Comedy, Romance:0
+Genre_Comedy, War:0
+Genre_Comedy, Western:0
+Genre_Crime, Drama:0
+Genre_Crime, Drama, Fantasy:0
+Genre_Crime, Drama, Film-Noir:0
+Genre_Crime, Drama, History:0
+Genre_Crime, Drama, Horror:0
+Genre_Crime, Drama, Music:0
+Genre_Crime, Drama, Musical:0
+Genre_Crime, Drama, Mystery:0
+Genre_Crime, Drama, Romance:0
+Genre_Crime, Drama, Sci-Fi:0
+Genre_Crime, Drama, Thriller:0
+Genre_Crime, Film-Noir, Mystery:0
+Genre_Crime, Film-Noir, Thriller:0
+Genre_Crime, Mystery, Thriller:0
+Genre_Crime, Thriller:0
+Genre_Drama:0
+Genre_Drama, Family:0
+Genre_Drama, Family, Fantasy:0
+Genre_Drama, Family, Musical:0
+Genre_Drama, Family, Sport:0
+Genre_Drama, Fantasy:0
+Genre_Drama, Fantasy, History:0
+Genre_Drama, Fantasy, Horror:0
+Genre_Drama, Fantasy, Music:0
+Genre_Drama, Fantasy, Mystery:0
+Genre_Drama, Fantasy, Romance:0
+Genre_Drama, Fantasy, War:0
+Genre_Drama, Film-Noir:0
+Genre_Drama, Film-Noir, Mystery:0
+Genre_Drama, Film-Noir, Romance:0
+Genre_Drama, History:0
+Genre_Drama, History, Music:0
+Genre_Drama, History, Mystery:0
+Genre_Drama, History, Romance:0
+Genre_Drama, History, Thriller:0
+Genre_Drama, History, War:0
+Genre_Drama, Horror:0
+Genre_Drama, Horror, Mystery:0
+Genre_Drama, Horror, Sci-Fi:0
+Genre_Drama, Horror, Thriller:0
+Genre_Drama, Music:0
+Genre_Drama, Music, Musical:0
+Genre_Drama, Music, Mystery:0
+Genre_Drama, Music, Romance:0
+Genre_Drama, Musical:0
+Genre_Drama, Mystery:0
+Genre_Drama, Mystery, Romance:0
+Genre_Drama, Mystery, Sci-Fi:0
+Genre_Drama, Mystery, Thriller:0
+Genre_Drama, Mystery, War:0
+Genre_Drama, Romance:0
+Genre_Drama, Romance, Sci-Fi:0
+Genre_Drama, Romance, Thriller:0
+Genre_Drama, Romance, War:0
+Genre_Drama, Sci-Fi:0
+Genre_Drama, Sci-Fi, Thriller:0
+Genre_Drama, Sport:0
+Genre_Drama, Thriller:0
+Genre_Drama, Thriller, War:0
+Genre_Drama, Thriller, Western:0
+Genre_Drama, War:0
+Genre_Drama, War, Western:0
+Genre_Drama, Western:0
+Genre_Family, Fantasy, Musical:0
+Genre_Family, Sci-Fi:0
+Genre_Fantasy, Horror:0
+Genre_Fantasy, Horror, Mystery:0
+Genre_Film-Noir, Mystery:0
+Genre_Film-Noir, Mystery, Thriller:0
+Genre_Film-Noir, Thriller:0
+Genre_Horror:0
+Genre_Horror, Mystery, Sci-Fi:0
+Genre_Horror, Mystery, Thriller:0
+Genre_Horror, Sci-Fi:0
+Genre_Horror, Thriller:0
+Genre_Mystery, Romance, Thriller:0
+Genre_Mystery, Sci-Fi, Thriller:0
+Genre_Mystery, Thriller:0
+Genre_Thriller:0
+Genre_Western:0
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The 'Poster_Link' column does not provide any useful information for our analysis, so it can be dropped.</p>
+
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15721,7 +16011,8 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># drop the &#39;Poster_Link&#39; column</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Poster_Link&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15736,11 +16027,355 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This level 1 cleaning neads to clean up the contents of the dataframe.</p>
+<p>The 'Series_Title' column can be renamed to 'Title' for consistency. The 'Certificate' column can be renamed to 'Rating' for consistency. The 'Released_Year' column can be renamed to 'Year' for consistency. The 'Director', 'Star1', 'Star2', 'Star3', and 'Star4' columns can be renamed to 'Director', 'Actor1', 'Actor2', 'Actor3', and 'Actor4' for consistency.</p>
 
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># rename the &#39;Series_Title&#39; column to &#39;Title&#39;</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Series_Title&#39;</span><span class="p">:</span> <span class="s1">&#39;Title&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># rename the &#39;Released_Year&#39; column to &#39;Year&#39;</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Released_Year&#39;</span><span class="p">:</span> <span class="s1">&#39;Year&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># rename the &#39;Certificate&#39; column to &#39;Rating&#39;</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Certificate&#39;</span><span class="p">:</span> <span class="s1">&#39;Rating&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># rename the &#39;Star1&#39;, &#39;Star2&#39;, &#39;Star3&#39;, and &#39;Star4&#39; columns to &#39;Actor1&#39;, &#39;Actor2&#39;, &#39;Actor3&#39;, and &#39;Actor4&#39;</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Star1&#39;</span><span class="p">:</span> <span class="s1">&#39;Actor1&#39;</span><span class="p">,</span> <span class="s1">&#39;Star2&#39;</span><span class="p">:</span> <span class="s1">&#39;Actor2&#39;</span><span class="p">,</span> <span class="s1">&#39;Star3&#39;</span><span class="p">:</span> <span class="s1">&#39;Actor3&#39;</span><span class="p">,</span> <span class="s1">&#39;Star4&#39;</span><span class="p">:</span> <span class="s1">&#39;Actor4&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The 'Runtime' column is currently a string with the format &quot;number min&quot;, and it should be converted to a numeric data type.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert the &#39;Runtime&#39; column to a numeric data type</span>
+<span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Runtime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Runtime&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; min&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The 'Genre' column may contain multiple genres for some movies, and it may be useful to split them into separate columns.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># split the &#39;Genre&#39; column into separate columns</span>
+<span class="n">genres</span> <span class="o">=</span> <span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Genre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">genres</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Genre1&#39;</span><span class="p">,</span> <span class="s1">&#39;Genre2&#39;</span><span class="p">,</span> <span class="s1">&#39;Genre3&#39;</span><span class="p">]</span>
+<span class="n">movie_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">movie_df</span><span class="p">,</span> <span class="n">genres</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The 'Overview' column contains a brief description of each movie, and it may need to be cleaned of any unnecessary formatting or special characters.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># clean the &#39;Overview&#39; column</span>
+<span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Overview&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Overview&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The 'Meta_score' column contains missing values, and it may be useful to handle them appropriately.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># handle missing values in the &#39;Meta_score&#39; column</span>
+<span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Meta_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Meta_score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Meta_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The 'No_of_Votes' column is currently a numeric data type with no commas to properly read the numbers. So, we'll have to add some commas.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add commas to the &#39;No_of_Votes&#39; column</span>
+<span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;No_of_Votes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;No_of_Votes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:,}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">movie_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Rating</th>
+      <th>Runtime</th>
+      <th>Genre</th>
+      <th>IMDB_Rating</th>
+      <th>Overview</th>
+      <th>Meta_score</th>
+      <th>Director</th>
+      <th>Actor1</th>
+      <th>Actor2</th>
+      <th>Actor3</th>
+      <th>Actor4</th>
+      <th>No_of_Votes</th>
+      <th>Gross</th>
+      <th>Genre1</th>
+      <th>Genre2</th>
+      <th>Genre3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>The Shawshank Redemption</td>
+      <td>1994</td>
+      <td>A</td>
+      <td>142</td>
+      <td>Drama</td>
+      <td>9.3</td>
+      <td>Two imprisoned men bond over a number of years...</td>
+      <td>80</td>
+      <td>Frank Darabont</td>
+      <td>Tim Robbins</td>
+      <td>Morgan Freeman</td>
+      <td>Bob Gunton</td>
+      <td>William Sadler</td>
+      <td>2,343,110</td>
+      <td>28,341,469</td>
+      <td>Drama</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>The Godfather</td>
+      <td>1972</td>
+      <td>A</td>
+      <td>175</td>
+      <td>Crime, Drama</td>
+      <td>9.2</td>
+      <td>An organized crime dynasty's aging patriarch t...</td>
+      <td>100</td>
+      <td>Francis Ford Coppola</td>
+      <td>Marlon Brando</td>
+      <td>Al Pacino</td>
+      <td>James Caan</td>
+      <td>Diane Keaton</td>
+      <td>1,620,367</td>
+      <td>134,966,411</td>
+      <td>Crime</td>
+      <td>Drama</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>The Dark Knight</td>
+      <td>2008</td>
+      <td>UA</td>
+      <td>152</td>
+      <td>Action, Crime, Drama</td>
+      <td>9.0</td>
+      <td>When the menace known as the Joker wreaks havo...</td>
+      <td>84</td>
+      <td>Christopher Nolan</td>
+      <td>Christian Bale</td>
+      <td>Heath Ledger</td>
+      <td>Aaron Eckhart</td>
+      <td>Michael Caine</td>
+      <td>2,303,232</td>
+      <td>534,858,444</td>
+      <td>Action</td>
+      <td>Crime</td>
+      <td>Drama</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>The Godfather: Part II</td>
+      <td>1974</td>
+      <td>A</td>
+      <td>202</td>
+      <td>Crime, Drama</td>
+      <td>9.0</td>
+      <td>The early life and career of Vito Corleone in ...</td>
+      <td>90</td>
+      <td>Francis Ford Coppola</td>
+      <td>Al Pacino</td>
+      <td>Robert De Niro</td>
+      <td>Robert Duvall</td>
+      <td>Diane Keaton</td>
+      <td>1,129,952</td>
+      <td>57,300,000</td>
+      <td>Crime</td>
+      <td>Drama</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>12 Angry Men</td>
+      <td>1957</td>
+      <td>U</td>
+      <td>96</td>
+      <td>Crime, Drama</td>
+      <td>9.0</td>
+      <td>A jury holdout attempts to prevent a miscarria...</td>
+      <td>96</td>
+      <td>Sidney Lumet</td>
+      <td>Henry Fonda</td>
+      <td>Lee J. Cobb</td>
+      <td>Martin Balsam</td>
+      <td>John Fiedler</td>
+      <td>689,845</td>
+      <td>4,360,000</td>
+      <td>Crime</td>
+      <td>Drama</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15762,7 +16397,249 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">,</span> <span class="n">MinMaxScaler</span>
+
+<span class="c1"># Drop unwanted columns</span>
+<span class="n">movie_df</span> <span class="o">=</span> <span class="n">movie_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Overview&#39;</span><span class="p">,</span> <span class="s1">&#39;Meta_score&#39;</span><span class="p">,</span> <span class="s1">&#39;Director&#39;</span><span class="p">,</span> <span class="s1">&#39;Actor1&#39;</span><span class="p">,</span> <span class="s1">&#39;Actor2&#39;</span><span class="p">,</span> <span class="s1">&#39;Actor3&#39;</span><span class="p">,</span> <span class="s1">&#39;Actor4&#39;</span><span class="p">,</span> <span class="s1">&#39;No_of_Votes&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Encode categorical variables using one-hot encoding</span>
+<span class="n">ohe_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Genre&#39;</span><span class="p">]</span>
+<span class="n">ohe_encoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ohe_encoded</span> <span class="o">=</span> <span class="n">ohe_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">movie_df</span><span class="p">[</span><span class="n">ohe_columns</span><span class="p">])</span>
+<span class="n">ohe_encoded_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ohe_encoded</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">ohe_encoder</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">(</span><span class="n">ohe_columns</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\preprocessing\_encoders.py:868: FutureWarning: `sparse` was renamed to `sparse_output` in version 1.2 and will be removed in 1.4. `sparse_output` is ignored unless you leave `sparse` to its default value.
+  warnings.warn(
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace the categorical columns with their encoded versions</span>
+<span class="n">movie_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">movie_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">ohe_columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">ohe_encoded_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Scale the numeric variables using MinMaxScaler</span>
+<span class="n">scaler_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Runtime&#39;</span><span class="p">,</span> <span class="s1">&#39;Gross&#39;</span><span class="p">]</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">movie_df</span><span class="p">[</span><span class="n">scaler_columns</span><span class="p">])</span>
+<span class="n">scaled_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaled</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">scaler_columns</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-intense-fg ansi-bold">In[109], line 4</span>
+<span class="ansi-green-fg">      2</span> scaler_columns = [&#39;Runtime&#39;, &#39;Gross&#39;]
+<span class="ansi-green-fg">      3</span> scaler = MinMaxScaler()
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span> scaled = scaler.fit_transform(movie_df[scaler_columns])
+<span class="ansi-green-fg">      5</span> scaled_df = pd.DataFrame(scaled, columns=scaler_columns)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\utils\_set_output.py:140</span>, in <span class="ansi-cyan-fg">_wrap_method_output.&lt;locals&gt;.wrapped</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, *args, **kwargs)</span>
+<span class="ansi-green-fg">    138</span> @wraps(f)
+<span class="ansi-green-fg">    139</span> def wrapped(self, X, *args, **kwargs):
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 140</span>     data_to_wrap = f(self, X, *args, **kwargs)
+<span class="ansi-green-fg">    141</span>     if isinstance(data_to_wrap, tuple):
+<span class="ansi-green-fg">    142</span>         # only wrap the first output for cross decomposition
+<span class="ansi-green-fg">    143</span>         return (
+<span class="ansi-green-fg">    144</span>             _wrap_data_with_container(method, data_to_wrap[0], X, self),
+<span class="ansi-green-fg">    145</span>             *data_to_wrap[1:],
+<span class="ansi-green-fg">    146</span>         )
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\base.py:878</span>, in <span class="ansi-cyan-fg">TransformerMixin.fit_transform</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y, **fit_params)</span>
+<span class="ansi-green-fg">    874</span> # non-optimized default implementation; override when a better
+<span class="ansi-green-fg">    875</span> # method is possible for a given clustering algorithm
+<span class="ansi-green-fg">    876</span> if y is None:
+<span class="ansi-green-fg">    877</span>     # fit method of arity 1 (unsupervised transformation)
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 878</span>     return self.fit(X, **fit_params).transform(X)
+<span class="ansi-green-fg">    879</span> else:
+<span class="ansi-green-fg">    880</span>     # fit method of arity 2 (supervised transformation)
+<span class="ansi-green-fg">    881</span>     return self.fit(X, y, **fit_params).transform(X)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\preprocessing\_data.py:427</span>, in <span class="ansi-cyan-fg">MinMaxScaler.fit</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y)</span>
+<span class="ansi-green-fg">    425</span> # Reset internal state before fitting
+<span class="ansi-green-fg">    426</span> self._reset()
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 427</span> return self.partial_fit(X, y)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\preprocessing\_data.py:466</span>, in <span class="ansi-cyan-fg">MinMaxScaler.partial_fit</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y)</span>
+<span class="ansi-green-fg">    460</span>     raise TypeError(
+<span class="ansi-green-fg">    461</span>         &#34;MinMaxScaler does not support sparse input. &#34;
+<span class="ansi-green-fg">    462</span>         &#34;Consider using MaxAbsScaler instead.&#34;
+<span class="ansi-green-fg">    463</span>     )
+<span class="ansi-green-fg">    465</span> first_pass = not hasattr(self, &#34;n_samples_seen_&#34;)
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 466</span> X = self._validate_data(
+<span class="ansi-green-fg">    467</span>     X,
+<span class="ansi-green-fg">    468</span>     reset=first_pass,
+<span class="ansi-green-fg">    469</span>     dtype=FLOAT_DTYPES,
+<span class="ansi-green-fg">    470</span>     force_all_finite=&#34;allow-nan&#34;,
+<span class="ansi-green-fg">    471</span> )
+<span class="ansi-green-fg">    473</span> data_min = np.nanmin(X, axis=0)
+<span class="ansi-green-fg">    474</span> data_max = np.nanmax(X, axis=0)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\base.py:565</span>, in <span class="ansi-cyan-fg">BaseEstimator._validate_data</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y, reset, validate_separately, **check_params)</span>
+<span class="ansi-green-fg">    563</span>     raise ValueError(&#34;Validation should be done on X, y or both.&#34;)
+<span class="ansi-green-fg">    564</span> elif not no_val_X and no_val_y:
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 565</span>     X = check_array(X, input_name=&#34;X&#34;, **check_params)
+<span class="ansi-green-fg">    566</span>     out = X
+<span class="ansi-green-fg">    567</span> elif no_val_X and not no_val_y:
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\utils\validation.py:879</span>, in <span class="ansi-cyan-fg">check_array</span><span class="ansi-blue-intense-fg ansi-bold">(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator, input_name)</span>
+<span class="ansi-green-fg">    877</span>         array = xp.astype(array, dtype, copy=False)
+<span class="ansi-green-fg">    878</span>     else:
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 879</span>         array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+<span class="ansi-green-fg">    880</span> except ComplexWarning as complex_warning:
+<span class="ansi-green-fg">    881</span>     raise ValueError(
+<span class="ansi-green-fg">    882</span>         &#34;Complex data not supported\n{}\n&#34;.format(array)
+<span class="ansi-green-fg">    883</span>     ) from complex_warning
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\utils\_array_api.py:185</span>, in <span class="ansi-cyan-fg">_asarray_with_order</span><span class="ansi-blue-intense-fg ansi-bold">(array, dtype, order, copy, xp)</span>
+<span class="ansi-green-fg">    182</span>     xp, _ = get_namespace(array)
+<span class="ansi-green-fg">    183</span> if xp.__name__ in {&#34;numpy&#34;, &#34;numpy.array_api&#34;}:
+<span class="ansi-green-fg">    184</span>     # Use NumPy API to support order
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 185</span>     array = numpy.asarray(array, order=order, dtype=dtype)
+<span class="ansi-green-fg">    186</span>     return xp.asarray(array, copy=copy)
+<span class="ansi-green-fg">    187</span> else:
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\core\generic.py:2070</span>, in <span class="ansi-cyan-fg">NDFrame.__array__</span><span class="ansi-blue-intense-fg ansi-bold">(self, dtype)</span>
+<span class="ansi-green-fg">   2069</span> def __array__(self, dtype: npt.DTypeLike | None = None) -&gt; np.ndarray:
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 2070</span>     return np.asarray(self._values, dtype=dtype)
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: could not convert string to float: &#39;28,341,469&#39;</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace the unscaled columns with their scaled versions</span>
+<span class="n">movie_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">movie_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">scaler_columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">scaled_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-intense-fg ansi-bold">In[117], line 2</span>
+<span class="ansi-green-fg">      1</span> # Replace the unscaled columns with their scaled versions
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span> movie_df = pd.concat([movie_df.drop(scaler_columns, axis=1), scaled_df], axis=1)
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;scaled_df&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Separate the target variable &#39;IMDB_Rating&#39; from the input features</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">movie_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;IMDB_Rating&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;IMDB_Rating&#39;</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -15783,7 +16660,19 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The dataset does have issues with missing values but for the most part we could just fill them in with either null or 0. This should avoid any major errors.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15791,12 +16680,86 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Gross&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie_df</span><span class="p">[</span><span class="s1">&#39;Gross&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)))</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">Gross</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">movie_df</span><span class="o">.</span><span class="n">Gross</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">Gross</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">movie_df</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">Genre2</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">movie_df</span><span class="o">.</span><span class="n">Genre2</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">Genre2</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">movie_df</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">Genre3</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">movie_df</span><span class="o">.</span><span class="n">Genre3</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">movie_df</span><span class="o">.</span><span class="n">Genre3</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">movie_df</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
+Cell <span class="ansi-green-intense-fg ansi-bold">In[168], line 1</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span> movie_df[&#39;Gross&#39;] = movie_df[&#39;Gross&#39;].apply(lambda x: float(x.replace(&#39;,&#39;, &#39;&#39;)))
+<span class="ansi-green-fg">      2</span> movie_df.Gross.fillna(movie_df.Gross.median(),inplace=True)
+<span class="ansi-green-fg">      3</span> movie_df.Gross.fillna(movie_df.mean(),inplace=True)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\core\series.py:4771</span>, in <span class="ansi-cyan-fg">Series.apply</span><span class="ansi-blue-intense-fg ansi-bold">(self, func, convert_dtype, args, **kwargs)</span>
+<span class="ansi-green-fg">   4661</span> def apply(
+<span class="ansi-green-fg">   4662</span>     self,
+<span class="ansi-green-fg">   4663</span>     func: AggFuncType,
+<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   4666</span>     **kwargs,
+<span class="ansi-green-fg">   4667</span> ) -&gt; DataFrame | Series:
+<span class="ansi-green-fg">   4668</span>     &#34;&#34;&#34;
+<span class="ansi-green-fg">   4669</span>     Invoke function on values of Series.
+<span class="ansi-green-fg">   4670</span> 
+<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   4769</span>     dtype: float64
+<span class="ansi-green-fg">   4770</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 4771</span>     return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\core\apply.py:1123</span>, in <span class="ansi-cyan-fg">SeriesApply.apply</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">   1120</span>     return self.apply_str()
+<span class="ansi-green-fg">   1122</span> # self.f is Callable
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1123</span> return self.apply_standard()
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\core\apply.py:1174</span>, in <span class="ansi-cyan-fg">SeriesApply.apply_standard</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">   1172</span>     else:
+<span class="ansi-green-fg">   1173</span>         values = obj.astype(object)._values
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1174</span>         mapped = lib.map_infer(
+<span class="ansi-green-fg">   1175</span>             values,
+<span class="ansi-green-fg">   1176</span>             f,
+<span class="ansi-green-fg">   1177</span>             convert=self.convert_dtype,
+<span class="ansi-green-fg">   1178</span>         )
+<span class="ansi-green-fg">   1180</span> if len(mapped) and isinstance(mapped[0], ABCSeries):
+<span class="ansi-green-fg">   1181</span>     # GH#43986 Need to do list(mapped) in order to get treated as nested
+<span class="ansi-green-fg">   1182</span>     #  See also GH#25959 regarding EA support
+<span class="ansi-green-fg">   1183</span>     return obj._constructor_expanddim(list(mapped), index=obj.index)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\_libs\lib.pyx:2924</span>, in <span class="ansi-cyan-fg">pandas._libs.lib.map_infer</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+
+Cell <span class="ansi-green-intense-fg ansi-bold">In[168], line 1</span>, in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-intense-fg ansi-bold">(x)</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span> movie_df[&#39;Gross&#39;] = movie_df[&#39;Gross&#39;].apply(lambda x: float(x.replace(&#39;,&#39;, &#39;&#39;)))
+<span class="ansi-green-fg">      2</span> movie_df.Gross.fillna(movie_df.Gross.median(),inplace=True)
+<span class="ansi-green-fg">      3</span> movie_df.Gross.fillna(movie_df.mean(),inplace=True)
+
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: &#39;float&#39; object has no attribute &#39;replace&#39;</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15806,7 +16769,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<pre><code>d.	Use the following function from sklearn.tree to create a prediction model that can predict IMDB_rating using Certificate, Runtime, Genre and Gross: 
+<pre><code>d.	Use the following function from sklearn.tree to create a prediction model that can predict IMDB_rating using Rating, Runtime, Genre and Gross: 
 
 </code></pre>
 <p><em>DecisionTreeRegressor(max_depth=5, min_impurity_decrease=0, min_samples_split=20, splitter='random')</em></p>
@@ -15816,7 +16779,7 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15824,12 +16787,107 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">plot_tree</span>
+
+<span class="c1"># define the decision tree regressor with specified hyperparameters</span>
+<span class="n">Regresstree</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_impurity_decrease</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">min_samples_split</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">splitter</span><span class="o">=</span><span class="s1">&#39;random&#39;</span><span class="p">)</span>
+
+<span class="c1"># train the model on the cleaned data</span>
+<span class="n">Regresstree</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># draw the trained tree to visualize it</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plot_tree</span><span class="p">(</span><span class="n">Regresstree</span><span class="p">,</span> <span class="n">feature_names</span><span class="o">=</span><span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-intense-fg ansi-bold">In[119], line 8</span>
+<span class="ansi-green-fg">      5</span> Regresstree = DecisionTreeRegressor(max_depth=5, min_impurity_decrease=0, min_samples_split=20, splitter=&#39;random&#39;)
+<span class="ansi-green-fg">      7</span> # train the model on the cleaned data
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 8</span> Regresstree.fit(X, y)
+<span class="ansi-green-fg">     10</span> # draw the trained tree to visualize it
+<span class="ansi-green-fg">     11</span> plt.figure(figsize=(20,10))
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\tree\_classes.py:1247</span>, in <span class="ansi-cyan-fg">DecisionTreeRegressor.fit</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y, sample_weight, check_input)</span>
+<span class="ansi-green-fg">   1218</span> def fit(self, X, y, sample_weight=None, check_input=True):
+<span class="ansi-green-fg">   1219</span>     &#34;&#34;&#34;Build a decision tree regressor from the training set (X, y).
+<span class="ansi-green-fg">   1220</span> 
+<span class="ansi-green-fg">   1221</span>     Parameters
+<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1244</span>         Fitted estimator.
+<span class="ansi-green-fg">   1245</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1247</span>     super().fit(
+<span class="ansi-green-fg">   1248</span>         X,
+<span class="ansi-green-fg">   1249</span>         y,
+<span class="ansi-green-fg">   1250</span>         sample_weight=sample_weight,
+<span class="ansi-green-fg">   1251</span>         check_input=check_input,
+<span class="ansi-green-fg">   1252</span>     )
+<span class="ansi-green-fg">   1253</span>     return self
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\tree\_classes.py:186</span>, in <span class="ansi-cyan-fg">BaseDecisionTree.fit</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y, sample_weight, check_input)</span>
+<span class="ansi-green-fg">    184</span> check_X_params = dict(dtype=DTYPE, accept_sparse=&#34;csc&#34;)
+<span class="ansi-green-fg">    185</span> check_y_params = dict(ensure_2d=False, dtype=None)
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 186</span> X, y = self._validate_data(
+<span class="ansi-green-fg">    187</span>     X, y, validate_separately=(check_X_params, check_y_params)
+<span class="ansi-green-fg">    188</span> )
+<span class="ansi-green-fg">    189</span> if issparse(X):
+<span class="ansi-green-fg">    190</span>     X.sort_indices()
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\base.py:579</span>, in <span class="ansi-cyan-fg">BaseEstimator._validate_data</span><span class="ansi-blue-intense-fg ansi-bold">(self, X, y, reset, validate_separately, **check_params)</span>
+<span class="ansi-green-fg">    577</span> if &#34;estimator&#34; not in check_X_params:
+<span class="ansi-green-fg">    578</span>     check_X_params = {**default_check_params, **check_X_params}
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 579</span> X = check_array(X, input_name=&#34;X&#34;, **check_X_params)
+<span class="ansi-green-fg">    580</span> if &#34;estimator&#34; not in check_y_params:
+<span class="ansi-green-fg">    581</span>     check_y_params = {**default_check_params, **check_y_params}
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\utils\validation.py:879</span>, in <span class="ansi-cyan-fg">check_array</span><span class="ansi-blue-intense-fg ansi-bold">(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator, input_name)</span>
+<span class="ansi-green-fg">    877</span>         array = xp.astype(array, dtype, copy=False)
+<span class="ansi-green-fg">    878</span>     else:
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 879</span>         array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+<span class="ansi-green-fg">    880</span> except ComplexWarning as complex_warning:
+<span class="ansi-green-fg">    881</span>     raise ValueError(
+<span class="ansi-green-fg">    882</span>         &#34;Complex data not supported\n{}\n&#34;.format(array)
+<span class="ansi-green-fg">    883</span>     ) from complex_warning
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\sklearn\utils\_array_api.py:185</span>, in <span class="ansi-cyan-fg">_asarray_with_order</span><span class="ansi-blue-intense-fg ansi-bold">(array, dtype, order, copy, xp)</span>
+<span class="ansi-green-fg">    182</span>     xp, _ = get_namespace(array)
+<span class="ansi-green-fg">    183</span> if xp.__name__ in {&#34;numpy&#34;, &#34;numpy.array_api&#34;}:
+<span class="ansi-green-fg">    184</span>     # Use NumPy API to support order
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 185</span>     array = numpy.asarray(array, order=order, dtype=dtype)
+<span class="ansi-green-fg">    186</span>     return xp.asarray(array, copy=copy)
+<span class="ansi-green-fg">    187</span> else:
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\core\generic.py:2070</span>, in <span class="ansi-cyan-fg">NDFrame.__array__</span><span class="ansi-blue-intense-fg ansi-bold">(self, dtype)</span>
+<span class="ansi-green-fg">   2069</span> def __array__(self, dtype: npt.DTypeLike | None = None) -&gt; np.ndarray:
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 2070</span>     return np.asarray(self._values, dtype=dtype)
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: could not convert string to float: &#39;28,341,469&#39;</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15847,7 +16905,7 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15855,7 +16913,10 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_predicted_IMDB_rating</span> <span class="o">=</span> <span class="n">RegressTree</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xs</span><span class="p">)</span>
+<span class="n">mean_predicted_IMDB_rating</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">*</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">summary_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Prediction by Decision Tree&#39;</span><span class="p">:</span> <span class="n">dt_predicted_IMDB_rating</span><span class="p">,</span> 
+    <span class="s1">&#39;Prediction by mean&#39;</span><span class="p">:</span> <span class="n">mean_predicted_IMDB_rating</span><span class="p">,</span> <span class="s1">&#39;Actual IMDB_rating&#39;</span><span class="p">:</span> <span class="n">y</span><span class="p">})</span>
 </pre></div>
 
      </div>
@@ -15863,6 +16924,46 @@ class="
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-intense-fg ansi-bold">In[113], line 1</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span> dt_predicted_IMDB_rating = RegressTree.predict(Xs)
+<span class="ansi-green-fg">      2</span> mean_predicted_IMDB_rating = np.ones(len(y))*y.mean()
+<span class="ansi-green-fg">      3</span> summary_df = pd.DataFrame({&#39;Prediction by Decision Tree&#39;: dt_predicted_IMDB_rating, &#39;Prediction by mean&#39;: mean_predicted_IMDB_rating, &#39;Actual IMDB_rating&#39;: y})
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;RegressTree&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The only to run this code is for me to fix the earlier mistakes and unfortunately, I'm stumped on those errors. Same deal for the next question.</p>
+
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15888,7 +16989,7 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15896,12 +16997,44 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">summary_df</span><span class="p">[</span><span class="s1">&#39;Decision Tree Error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">summary_df</span><span class="p">[</span><span class="s1">&#39;Prediction by Decision Tree&#39;</span><span class="p">]</span><span class="o">-</span> <span class="n">summary_df</span><span class="p">[</span><span class="s1">&#39;Actual IMDB_rating&#39;</span><span class="p">])</span>
+<span class="n">summary_df</span><span class="p">[</span><span class="s1">&#39;Mean Error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">summary_df</span><span class="p">[</span><span class="s1">&#39;Prediction by mean&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">summary_df</span><span class="p">[</span><span class="s1">&#39;Actual IMDB_rating&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">summary_df</span><span class="p">[[</span><span class="s1">&#39;Decision Tree Error&#39;</span><span class="p">,</span><span class="s1">&#39;Mean Error&#39;</span><span class="p">]]</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greys&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-intense-fg ansi-bold">In[114], line 1</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span> summary_df[&#39;Decision Tree Error&#39;] = abs(summary_df[&#39;Prediction by Decision Tree&#39;]- summary_df[&#39;Actual IMDB_rating&#39;])
+<span class="ansi-green-fg">      2</span> summary_df[&#39;Mean Error&#39;] = abs(summary_df[&#39;Prediction by mean&#39;] - summary_df[&#39;Actual IMDB_rating&#39;])
+<span class="ansi-green-fg">      3</span> plt.figure(figsize=(2,10))
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;summary_df&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16207,7 +17340,7 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16215,12 +17348,52 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">liking_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;Metal or Hardrock&#39;</span><span class="p">]</span>
+
+<span class="n">liking_data</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="n">liking_cols</span><span class="p">]</span>
+
+<span class="n">Q1</span> <span class="o">=</span> <span class="n">liking_data</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">Q3</span> <span class="o">=</span> <span class="n">liking_data</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">IQR</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">IQR</span>
+
+<span class="n">outliers</span> <span class="o">=</span> <span class="p">((</span><span class="n">liking_data</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">liking_data</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">))</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">outlier_count</span> <span class="o">=</span> <span class="n">outliers</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">outlier_data</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="n">outliers</span><span class="p">]</span>
+
+<span class="n">outlier_data</span>
+<span class="n">outlier_count</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16240,7 +17413,7 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16248,12 +17421,304 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">BM</span> <span class="o">=</span> <span class="p">(</span><span class="n">response_df</span><span class="o">.</span><span class="n">Weight</span><span class="o">&gt;</span><span class="mi">130</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">response_df</span><span class="o">.</span><span class="n">Height</span><span class="o">&lt;</span><span class="mi">70</span><span class="p">)</span>
+<span class="n">response_df</span><span class="p">[</span><span class="n">BM</span><span class="p">]</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Music</th>
+      <th>Slow songs or fast songs</th>
+      <th>Dance</th>
+      <th>Folk</th>
+      <th>Country</th>
+      <th>Classical music</th>
+      <th>Musical</th>
+      <th>Pop</th>
+      <th>Rock</th>
+      <th>Metal or Hardrock</th>
+      <th>...</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Number of siblings</th>
+      <th>Gender</th>
+      <th>Left - right handed</th>
+      <th>Education</th>
+      <th>Only child</th>
+      <th>Village - town</th>
+      <th>House - block of flats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>676</th>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>20.0</td>
+      <td>62.0</td>
+      <td>55.0</td>
+      <td>2.0</td>
+      <td>female</td>
+      <td>right handed</td>
+      <td>college/bachelor degree</td>
+      <td>no</td>
+      <td>city</td>
+      <td>house/bungalow</td>
+    </tr>
+    <tr>
+      <th>885</th>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>...</td>
+      <td>23.0</td>
+      <td>NaN</td>
+      <td>165.0</td>
+      <td>0.0</td>
+      <td>female</td>
+      <td>right handed</td>
+      <td>secondary school</td>
+      <td>yes</td>
+      <td>city</td>
+      <td>house/bungalow</td>
+    </tr>
+    <tr>
+      <th>992</th>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>...</td>
+      <td>30.0</td>
+      <td>200.0</td>
+      <td>150.0</td>
+      <td>1.0</td>
+      <td>male</td>
+      <td>right handed</td>
+      <td>masters degree</td>
+      <td>no</td>
+      <td>city</td>
+      <td>block of flats</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 150 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bmi_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Weight&#39;</span><span class="p">,</span> <span class="s1">&#39;Height&#39;</span><span class="p">]</span>
+<span class="n">bmi_data</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="n">bmi_cols</span><span class="p">]</span>
+
+<span class="c1"># Calculate BMI</span>
+<span class="n">height_m</span> <span class="o">=</span> <span class="n">bmi_data</span><span class="p">[</span><span class="s1">&#39;Height&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">bmi_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;BMI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bmi_data</span><span class="p">[</span><span class="s1">&#39;Weight&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">height_m</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">bmi_data</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>C:\Users\ccobr\AppData\Local\Temp\ipykernel_12744\919561524.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  bmi_data.loc[:, &#39;BMI&#39;] = bmi_data[&#39;Weight&#39;] / (height_m ** 2)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>BMI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>48.0</td>
+      <td>163.0</td>
+      <td>18.066167</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>58.0</td>
+      <td>163.0</td>
+      <td>21.829952</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>67.0</td>
+      <td>176.0</td>
+      <td>21.629649</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>59.0</td>
+      <td>172.0</td>
+      <td>19.943213</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>59.0</td>
+      <td>170.0</td>
+      <td>20.415225</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1005</th>
+      <td>57.0</td>
+      <td>164.0</td>
+      <td>21.192742</td>
+    </tr>
+    <tr>
+      <th>1006</th>
+      <td>80.0</td>
+      <td>183.0</td>
+      <td>23.888441</td>
+    </tr>
+    <tr>
+      <th>1007</th>
+      <td>75.0</td>
+      <td>173.0</td>
+      <td>25.059307</td>
+    </tr>
+    <tr>
+      <th>1008</th>
+      <td>58.0</td>
+      <td>173.0</td>
+      <td>19.379197</td>
+    </tr>
+    <tr>
+      <th>1009</th>
+      <td>72.0</td>
+      <td>185.0</td>
+      <td>21.037253</td>
+    </tr>
+  </tbody>
+</table>
+<p>1010 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16277,7 +17742,16 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age_Q1</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">age_Q3</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">age_IQR</span> <span class="o">=</span> <span class="n">age_Q3</span> <span class="o">-</span> <span class="n">age_Q1</span>
+<span class="n">age_lower_bound</span> <span class="o">=</span> <span class="n">age_Q1</span> <span class="o">-</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">age_IQR</span>
+<span class="n">age_upper_bound</span> <span class="o">=</span> <span class="n">age_Q3</span> <span class="o">+</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">age_IQR</span>
+
+<span class="n">age_outliers</span> <span class="o">=</span> <span class="p">((</span><span class="n">response_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">age_lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">response_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">age_upper_bound</span><span class="p">))</span>
+<span class="n">bmi_outliers</span> <span class="o">=</span> <span class="p">(</span><span class="n">bmi_data</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">bmi_data</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="n">suspected_outliers</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="n">bmi_outliers</span> <span class="o">|</span> <span class="n">age_outliers</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -16298,7 +17772,7 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16306,12 +17780,107 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bmi_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Weight&#39;</span><span class="p">,</span> <span class="s1">&#39;Height&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">]</span>
+<span class="n">bmi_data</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="n">bmi_cols</span><span class="p">]</span>
+
+<span class="c1"># Calculate BMI</span>
+<span class="n">height_m</span> <span class="o">=</span> <span class="n">bmi_data</span><span class="p">[</span><span class="s1">&#39;Height&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">bmi_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;BMI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bmi_data</span><span class="p">[</span><span class="s1">&#39;Weight&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">height_m</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">age_Q1</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">age_Q3</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">age_IQR</span> <span class="o">=</span> <span class="n">age_Q3</span> <span class="o">-</span> <span class="n">age_Q1</span>
+<span class="n">age_lower_bound</span> <span class="o">=</span> <span class="n">age_Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">age_IQR</span>
+<span class="n">age_upper_bound</span> <span class="o">=</span> <span class="n">age_Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">age_IQR</span>
+
+<span class="n">age_outliers</span> <span class="o">=</span> <span class="p">((</span><span class="n">response_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">age_lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">response_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">age_upper_bound</span><span class="p">))</span>
+<span class="n">bmi_outliers</span> <span class="o">=</span> <span class="p">(</span><span class="n">bmi_data</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">bmi_data</span><span class="p">[</span><span class="s1">&#39;BMI&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="n">suspected_outliers</span> <span class="o">=</span> <span class="n">response_df</span><span class="p">[</span><span class="n">bmi_outliers</span> <span class="o">&amp;</span> <span class="n">age_outliers</span><span class="p">]</span>
+
+<span class="c1"># filter outliers based on gender</span>
+<span class="n">gender_outliers</span> <span class="o">=</span> <span class="n">suspected_outliers</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Gender&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">bmi_outliers</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">gender_outliers_df</span> <span class="o">=</span> <span class="n">gender_outliers</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+
+<span class="n">gender_outliers_df</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>C:\Users\ccobr\AppData\Local\Temp\ipykernel_12744\3498447562.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  bmi_data.loc[:, &#39;BMI&#39;] = bmi_data[&#39;Weight&#39;] / (height_m ** 2)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>female</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>male</th>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16328,7 +17897,7 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16343,6 +17912,102 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>                         Traceback (most recent call last)
+Cell <span class="ansi-green-intense-fg ansi-bold">In[66], line 1</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span> transaction_df = pd.read_csv(&#39;creditcard.csv&#39;)
+<span class="ansi-green-fg">      2</span> transaction_df
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\util\_decorators.py:211</span>, in <span class="ansi-cyan-fg">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="ansi-blue-intense-fg ansi-bold">(*args, **kwargs)</span>
+<span class="ansi-green-fg">    209</span>     else:
+<span class="ansi-green-fg">    210</span>         kwargs[new_arg_name] = new_arg_value
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 211</span> return func(*args, **kwargs)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\util\_decorators.py:331</span>, in <span class="ansi-cyan-fg">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="ansi-blue-intense-fg ansi-bold">(*args, **kwargs)</span>
+<span class="ansi-green-fg">    325</span> if len(args) &gt; num_allow_args:
+<span class="ansi-green-fg">    326</span>     warnings.warn(
+<span class="ansi-green-fg">    327</span>         msg.format(arguments=_format_argument_list(allow_args)),
+<span class="ansi-green-fg">    328</span>         FutureWarning,
+<span class="ansi-green-fg">    329</span>         stacklevel=find_stack_level(),
+<span class="ansi-green-fg">    330</span>     )
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 331</span> return func(*args, **kwargs)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\io\parsers\readers.py:950</span>, in <span class="ansi-cyan-fg">read_csv</span><span class="ansi-blue-intense-fg ansi-bold">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="ansi-green-fg">    935</span> kwds_defaults = _refine_defaults_read(
+<span class="ansi-green-fg">    936</span>     dialect,
+<span class="ansi-green-fg">    937</span>     delimiter,
+<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    946</span>     defaults={&#34;delimiter&#34;: &#34;,&#34;},
+<span class="ansi-green-fg">    947</span> )
+<span class="ansi-green-fg">    948</span> kwds.update(kwds_defaults)
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 950</span> return _read(filepath_or_buffer, kwds)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\io\parsers\readers.py:605</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-intense-fg ansi-bold">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-fg">    602</span> _validate_names(kwds.get(&#34;names&#34;, None))
+<span class="ansi-green-fg">    604</span> # Create the parser.
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 605</span> parser = TextFileReader(filepath_or_buffer, **kwds)
+<span class="ansi-green-fg">    607</span> if chunksize or iterator:
+<span class="ansi-green-fg">    608</span>     return parser
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\io\parsers\readers.py:1442</span>, in <span class="ansi-cyan-fg">TextFileReader.__init__</span><span class="ansi-blue-intense-fg ansi-bold">(self, f, engine, **kwds)</span>
+<span class="ansi-green-fg">   1439</span>     self.options[&#34;has_index_names&#34;] = kwds[&#34;has_index_names&#34;]
+<span class="ansi-green-fg">   1441</span> self.handles: IOHandles | None = None
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1442</span> self._engine = self._make_engine(f, self.engine)
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\io\parsers\readers.py:1735</span>, in <span class="ansi-cyan-fg">TextFileReader._make_engine</span><span class="ansi-blue-intense-fg ansi-bold">(self, f, engine)</span>
+<span class="ansi-green-fg">   1733</span>     if &#34;b&#34; not in mode:
+<span class="ansi-green-fg">   1734</span>         mode += &#34;b&#34;
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1735</span> self.handles = get_handle(
+<span class="ansi-green-fg">   1736</span>     f,
+<span class="ansi-green-fg">   1737</span>     mode,
+<span class="ansi-green-fg">   1738</span>     encoding=self.options.get(&#34;encoding&#34;, None),
+<span class="ansi-green-fg">   1739</span>     compression=self.options.get(&#34;compression&#34;, None),
+<span class="ansi-green-fg">   1740</span>     memory_map=self.options.get(&#34;memory_map&#34;, False),
+<span class="ansi-green-fg">   1741</span>     is_text=is_text,
+<span class="ansi-green-fg">   1742</span>     errors=self.options.get(&#34;encoding_errors&#34;, &#34;strict&#34;),
+<span class="ansi-green-fg">   1743</span>     storage_options=self.options.get(&#34;storage_options&#34;, None),
+<span class="ansi-green-fg">   1744</span> )
+<span class="ansi-green-fg">   1745</span> assert self.handles is not None
+<span class="ansi-green-fg">   1746</span> f = self.handles.handle
+
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\ccobr\OneDrive\Desktop\INST 447\.venv\lib\site-packages\pandas\io\common.py:856</span>, in <span class="ansi-cyan-fg">get_handle</span><span class="ansi-blue-intense-fg ansi-bold">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="ansi-green-fg">    851</span> elif isinstance(handle, str):
+<span class="ansi-green-fg">    852</span>     # Check whether the filename is to be opened in binary mode.
+<span class="ansi-green-fg">    853</span>     # Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.
+<span class="ansi-green-fg">    854</span>     if ioargs.encoding and &#34;b&#34; not in ioargs.mode:
+<span class="ansi-green-fg">    855</span>         # Encoding
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 856</span>         handle = open(
+<span class="ansi-green-fg">    857</span>             handle,
+<span class="ansi-green-fg">    858</span>             ioargs.mode,
+<span class="ansi-green-fg">    859</span>             encoding=ioargs.encoding,
+<span class="ansi-green-fg">    860</span>             errors=errors,
+<span class="ansi-green-fg">    861</span>             newline=&#34;&#34;,
+<span class="ansi-green-fg">    862</span>         )
+<span class="ansi-green-fg">    863</span>     else:
+<span class="ansi-green-fg">    864</span>         # Binary mode
+<span class="ansi-green-fg">    865</span>         handle = open(handle, ioargs.mode)
+
+<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;creditcard.csv&#39;</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
